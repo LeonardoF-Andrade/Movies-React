@@ -1,11 +1,11 @@
 import { Container } from './styles';
-import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowLeftLong } from 'react-icons/fa6';
 
-export const ButtonText = ({ title, ...rest }) => {
+export const ButtonText = ({ icon: Icon, title, ...rest }) => {
   return (
     <Container type="button" {...rest}>
-      <FaArrowLeftLong />
+      {Icon && <Icon size={20} />}
       {title}
     </Container>
   );
-}
+};
