@@ -1,9 +1,10 @@
-import { Container} from './styles';
+import { Container } from './styles';
 
-export const Button = ({title, ...rest}) => {
+export const Button = ({ title, icon: Icon, ...rest }) => {
   return (
     <Container type="button" {...rest}>
+      {Icon && <Icon size={20} />}
       {title}
     </Container>
   );
-}
+};

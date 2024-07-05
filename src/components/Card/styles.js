@@ -15,7 +15,6 @@ export const Container = styled.button`
   border-radius: 8px;
   padding: 32px;
   color: ${({ theme }) => theme.COLORS.WHITE};
-  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
 
@@ -39,7 +38,7 @@ export const Text = styled.div`
   display: -webkit-box;
   -webkit-line-clamp: 2; /* Número de linhas a serem exibidas antes do truncamento */
   -webkit-box-orient: vertical;
-  
+
   text-align: justify;
   color: ${({ theme }) => theme.COLORS.GRAY_300};
   margin-bottom: 28px;

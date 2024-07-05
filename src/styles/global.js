@@ -8,11 +8,22 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100%;
+  }
+
   body{
     color: ${theme.COLORS.WHITE};
-    background-color: ${theme.COLORS.BACKGROUND_900};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
     -webkit-font-smoothing: antialiased;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 
   a {
