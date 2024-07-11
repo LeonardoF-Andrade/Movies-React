@@ -1,14 +1,21 @@
-import { Container, Section } from './styles';
-import { Header } from '../../components/Header';
+import { FaArrowLeft } from 'react-icons/fa6';
 import { Button } from '../../components/Button';
 import { ButtonText } from '../../components/ButtonText';
+import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
-import { TextArea } from '../../components/TextArea';
-import { FaArrowLeft } from 'react-icons/fa6';
 import { Marcador } from '../../components/Marcadores';
+import { TextArea } from '../../components/TextArea';
+import { Container, Section } from './styles';
 // import { Section } from '../../components/Section';
+import { useState } from 'react';
 
 export const New = () => {
+  const [markers, setMarkers] = useState(['React', 'Node']);
+
+  const handleAddMarkerClick = (value) => {
+    setMarkers((prevMarkers) => [...prevMarkers, value]);
+  };
+
   return (
     <Container>
       <Header />
@@ -23,8 +30,10 @@ export const New = () => {
         <Section>
           <h2>Marcadores</h2>
           <div className="Note">
-            <Marcador value="React" />
-            <Marcador isNew placeholder="Novo Marcador" />
+            {markers.map((marker) => (
+              <Marcador key={marker} value={marker} />
+            ))}
+            <Marcador isNew placeholder="Novo Marcador" onAddClick={handleAddMarkerClick}/>
           </div>
         </Section>
         <div>

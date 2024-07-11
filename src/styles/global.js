@@ -11,7 +11,7 @@ export default createGlobalStyle`
   html{
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex-grow: 1;
     min-height: 100%;
   }
 
@@ -20,10 +20,10 @@ export default createGlobalStyle`
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
     -webkit-font-smoothing: antialiased;
-
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex-grow: 1;
   }
 
   a {
@@ -36,7 +36,7 @@ export default createGlobalStyle`
   }
 
   button, a, input {
-    font-family: 'Roboto', sans-serif;
+
     font-size: 16px;
     outline: none;
   }

@@ -1,15 +1,14 @@
+import { FiPlus, FiX } from 'react-icons/fi';
 import { Container } from './styles';
-import { FiX, FiPlus } from 'react-icons/fi';
-
+// eslint-disable-next-line
 export const Marcador = ({ value, isNew = false, onClick, ...rest }) => {
   return (
     <Container $isnew={isNew.toString()}>
-      <input
-        type="text"
-        {...rest}
-        readOnly={!isNew}
-        value={value}
-      />
+      {isNew ? (
+        <input type="text" {...rest} readOnly={!isNew} value={value} />
+      ) : (
+        <span>{value}</span>
+      )}
       <button type="button" onClick={onClick}>
         {isNew ? <FiPlus /> : <FiX />}
       </button>
