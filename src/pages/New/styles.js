@@ -17,7 +17,7 @@ export const Container = styled.div`
       margin-top: -16px;
     }
 
-    div {
+    > div {
       display: flex;
       width: 100%;
       gap: 40px;
@@ -42,10 +42,10 @@ export const Section = styled.section`
     font-weight: 400;
   }
   .Note {
-    width: 100%;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
     border-radius: 8px;
     padding: 16px;
-    /* flex-wrap: wrap; */
+    display: flex;
+    gap: 16px;
   }
 `;
